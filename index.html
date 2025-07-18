@@ -5,96 +5,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POLIAGENTX</title>
+     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="Icon" type="image/x-icon" href="Assets/Images/logo1.png" class="h-8 w-8">
 
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .initial-hidden {
-            opacity: 0;
-        }
-    </style>
 </head>
 
-<body class="font-[Poppins] bg-gray-100 ">
-    <header class="sticky top-0 bg-white text-gray-900 transition-all duration-300 z-50 backdrop-blur-md shadow-md z-50">
-        <nav class="max-w-6xl mx-auto flex items-center justify-between py-4 px-4 md:px-6 lg:px-0">
-            <div class="flex items-center gap-2">
-                <span class="text-xl font-semibold">POLIAGENTX</span>
-            </div>
-    
-            <button id="menu-toggle" class="md:hidden focus:outline-none">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-    
-            <ul id="menu"
-                class="hidden md:flex flex-col md:flex-row gap-6 md:items-center absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent text-gray-900 md:text-inherit shadow md:shadow-none z-50 px-6 py-4 md:p-0 font-bold">
-                <li><a href="#home" class="hover:text-green-600">Home</a></li>
-                <li><a href="#about" class="hover:text-green-600">About</a></li>
-                </li>
-                <li><a href="#features" class="hover:text-green-600">Features</a></li>
-                <li><a href="#team" class="hover:text-green-600">Team</a></li>
-                <li><a href="#Partners" class="hover:text-green-600">Partners</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="font-[Poppins] bg-gray-100 min-h-screen flex flex-col">
+  <main class="flex-grow">
 
-    <script>
-        $(document).ready(function () {
-            $('#menu-toggle').click(function () {
-                $('#menu').toggleClass('hidden');
-            });
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <header class="sticky top-0 bg-white text-gray-900 transition-all duration-300 z-50 backdrop-blur-md shadow-md">
+        <nav class="max-w-6xl mx-auto flex items-center justify-between h-full px-4 md:px-6 lg:px-0" style="height: 70px;">
+          <div class="flex items-center gap-2">
+            <span class="text-xl font-semibold ">POLIAGENTX</span>
+          </div>
+      
+          <!-- Mobile toggle -->
+          <button id="menu-toggle" class="md:hidden focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+      
+          <!-- Menu -->
+          <ul id="menu"
+            class="hidden md:flex flex-col md:flex-row gap-6 md:items-center absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent text-black shadow md:shadow-none z-50 px-6 py-4 md:p-0">
+            <li><a href="#home" class=" hover:text-green-600">Home</a></li>
+            <li><a href="#about" class="hover:text-green-600">About</a></li>
+            <!-- <li><a href="#features" class="hover:text-green-600">Features</a></li> -->
+            <li><a href="#team" class="hover:text-green-600">Team</a></li>
+            <li><a href="#Partners" class="hover:text-green-600">Partners</a></li>
+            <li>
+              <a href="#get-started" class="inline-flex items-center justify-center px-4 py-2 bg-[#424a58ff] text-white font-bold text-sm rounded-lg shadow-md hover:from-[#b37700] hover:to-[#d4942a] hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+                <span>Get Started</span>
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      
 
     <section id="home" class="bg-[#424a58ff] relative min-h-screen w-full flex items-center justify-center">
         <div class="flex flex-col md:flex-row items-start gap-12 max-w-6xl w-full mx-auto px-4">
@@ -106,158 +65,267 @@
     
             <div class="text-center md:text-left w-full md:w-1/2">
                 <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight mb-6">
-                    <span class="text-white">Design a better future</span> <span class="text-[#cb8700]">through</span> <span class="text-white">simulations</span>
+                    <span class="  text-white ">Design a better future</span> <span class=" text-[#cb8700] bevel-text">through</span> <span class="text-white  ">simulations</span>
                 </h1>
-                <p class="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-lg mx-auto md:mx-0">
+                <p class="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-lg mx-auto md:mx-0 mb-8 ">
                     simplifies evaluation and analysis of policies through interactive simulations and real-time data visualizations
                 </p>
+               
             </div>
     
         </div>
     </section>
 
-   
+    <!-- ABOUT SECTION -->
+<section id="about" class="min-h-screen w-full bg-gray-100">
+  <div class="bg-[#f2f2f2f2] w-full">
+    <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 xl:px-12 py-12 text-center">
+      <h1 class="xl:text-5xl 2xl:text-6xl  text-[#cb8700] mb-4  embossed-text bevel-text">About Us</h1>
+      <p class="text-lg md:text-xl xl:text-2xl text-[#000000] leading-relaxed max-w-2xl mx-auto embossed-text bevel-text">
+        Explore more about our project
+      </p>
+    </div>
+  </div>
+  <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 xl:px-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 xl:gap-12">
 
-    <section id="about" class="min-h-screen w-full bg-gray-100 ">
-        <!-- Intro header -->
-        <div class="bg-[#31539B] w-full">
-          <div class="max-w-6xl mx-auto px-4 py-12 text-center">
-            <h1 class="text-3xl md:text-5xl font-bold text-[#cb8700] mb-4">About Us</h1>
-            <p class="text-lg text-[#f2f2f2] leading-relaxed max-w-2xl mx-auto">
-              Explore more about our project
+          <div class="bg-white p-7 rounded-2xl shadow-xl">
+            <div class="text-red-600 text-4xl mb-4"><i class="fas fa-chart-line"></i></div>
+            <h2 class="text-2xl font-bold text-gray-800 mb-3">The Problem</h2>
+            <p class="text-gray-600">
+              Decision-makers struggle to analyze government policies effectively using traditional methods.
+            </p>
+          </div>
+        
+          <div class="bg-white p-7 rounded-2xl shadow-xl">
+            <div class="text-green-600 text-4xl mb-4"><i class="fas fa-lightbulb"></i></div>
+            <h2 class="text-2xl font-bold text-gray-800 mb-3">The Solution</h2>
+            <p class="text-gray-600">
+              PoliAgentX simplifies evaluation and analysis of policies through simulations.
+            </p>
+          </div>
+        
+          <div class="bg-white p-7 rounded-2xl shadow-xl">
+            <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-bullseye"></i></div>
+            <h2 class="text-2xl font-bold text-gray-800 mb-3">Our Mission</h2>
+            <p class="text-gray-600">
+              To empower policymakers with a low‑cost decision simulation engine tailored to Kenya.
+            </p>
+          </div>
+        
+          <div class="bg-white p-7 rounded-2xl shadow-xl">
+            <div class="text-yellow-600 text-4xl mb-4"><i class="fas fa-crosshairs"></i></div>
+            <h2 class="text-2xl font-bold text-gray-800 mb-3">Our Objective</h2>
+            <p class="text-gray-600">
+              To deliver a powerful tool integrating PPI data to drive evidence-based growth.
             </p>
           </div>
         </div>
-      
-        <!-- Main container -->
-        <div class="max-w-6xl mx-auto px-4 py-16 flex flex-col lg:flex-row items-start gap-5 relative">
+    
         
-         
-      
-          <!-- Cards Section -->
-          <div class="flex-1 relative grid grid-cols-2 gap-x-8">
-            <!-- Left column -->
-            <div class="flex flex-col space-y-7 mt-8">
-              <!-- Problem card (above line, z-10) -->
-              <div class="bg-white p-7 rounded-2xl shadow-xl relative z-10">
-                <div class="text-red-600 text-4xl mb-4"><i class="fas fa-chart-line"></i></div>
-                <h2 class="text-2xl font-bold text-gray-800 mb-3">The Problem</h2>
-                <p class="text-gray-600">Decision-makers struggle to analyze government policies effectively using traditional methods.</p>
-              </div>
-      
-              <!-- Mission card (line passes behind it, no z-index override) -->
-              <div class="bg-white p-7 rounded-2xl shadow-xl relative z-50">
-                <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-bullseye"></i></div>
-                <h2 class="text-2xl font-bold text-gray-800 mb-3">Our Mission</h2>
-                <p class="text-gray-600">To empower policymakers with a low‑cost decision simulation engine tailored to Kenya.</p>
-              </div>
-            </div>
-      
-            <!-- Right column -->
-            <div class="flex flex-col space-y-7 mt-1">
-              <!-- Solution card-->
-              <div class="bg-white p-7 rounded-2xl shadow-xl relative z-10 -mt-16">
-                <div class="text-green-600 text-4xl mb-4"><i class="fas fa-lightbulb"></i></div>
-                <h2 class="text-2xl font-bold text-gray-800 mb-3">The Solution</h2>
-                <p class="text-gray-600">PoliAgentX simplifies evaluation and analysis of policies through simulations.</p>
-              </div>
-      
-              <!-- Objective card (above line, z-10) -->
-              <div class="bg-white p-7 rounded-2xl shadow-xl relative z-10">
-                <div class="text-yellow-600 text-4xl mb-4"><i class="fas fa-crosshairs"></i></div>
-                <h2 class="text-2xl font-bold text-gray-800 mb-3">Our Objective</h2>
-                <p class="text-gray-600">To deliver a powerful tool integrating PPI data to drive evidence-based growth.</p>
-              </div>
-            </div>
-          </div>
-      
-          <!-- Image Section -->
-          <div class="flex-1 flex justify-center mt-12 lg:mt-0 relative z-10 absolute inset-4 clip-pentagon overflow-hidden">
-            <img src="Assets/Images/joyful.png"
-                 alt="About illustration"
-                 class="max-w-md lg:max-w-lg ">
-          </div>
-        </div>
-        <!-- Horizontal heartbeat line -->
-<div class="absolute left-0 w-full pointer-events-none z-0" style="top: 1500px;">
-    <svg class="w-full h-12" viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path d="
-        M0,50 
-        L600,50
-        L670,50 
-        L690,30 
-        L710,70 
-        L730,50 
-        L800,50
-        L1440,50"
-        stroke="#15803d"
-        stroke-width="3"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"/>
-    </svg>
-  </div>
+      </div>
+    <!-- </section> -->
   
-      </section>
-      
-      
+   <!-- <section id="features" class="bg-white"> -->
+  <!-- Features Intro -->
+  <div class="bg-[#f2f2f2] w-full">
+    <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 xl:px-12 py-12 text-center">
+      <h1 class=" xl:text-5xl 2xl:text-6xl  text-[#cb8700] mb-4 embossed-text bevel-text">Model Components</h1>
+      <p class="text-lg md:text-xl xl:text-2xl text-[#000000] leading-relaxed max-w-2xl mx-auto embossed-text bevel-text">
+        Core POLIAGENTX's model components
+      </p>
+    </div>
+  </div>
 
 
-    <!-- <section id="features" class="bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12 ">
-                <h1 class="text-3xl font-bold text-green-700">Features of PoliAgentX</h1>
-            </div>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="bg-gray-100 rounded-xl p-6 shadow h-full flex flex-col initial-hidden">
-                    <h2 class="text-xl font-semibold text-green-600 mb-4">Insight to the Future</h2>
-                    <p class="text-gray-700 flex-grow">
-                        Using ABM simulation engine, our platform enables simulation of future policy impacts, helping
-                        in modeling the results of different
-                        strategies before implementation.
-                    </p>
-                </div>
-                <div class="bg-gray-100 rounded-xl p-6 shadow animate h-full flex flex-col initial-hidden">
-                    <h2 class="text-xl font-semibold text-green-600 mb-4">Ease of Use</h2>
-                    <p class="text-gray-700 flex-grow">
-                        Simple, intuitive design ensures focus remains on policy rather than complexity. Help is always
-                        one click
-                        away.
-                    </p>
-                </div>
-                <div class="bg-gray-100 rounded-xl p-6 shadow backdrop-blur-md h-full flex flex-col initial-hidden">
-                    <h2 class="text-xl font-semibold text-green-600 mb-4">Understandable Results</h2>
-                    <p class="text-gray-700 flex-grow">
-                        Our outputs are visual, digestible, and shareable—making policy insights clearer for teams and
-                        stakeholders.
-                    </p>
-                </div>
-            </div>
+
+    <!-- Collapsible Accordion Steps -->
+    <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 xl:px-12" >
+      <div id="accordion-parent" class="space-y-8">
+        <!-- Step 1 -->
+        <div class="overflow-hidden shadow-sm">
+           <button class="w-full flex justify-between items-center px-8 py-6 text-left font-semibold text-green-700 bg-[#e9eef3] hover:bg-gray-200 transition group focus:outline-none"
+            onclick="toggleAccordion(this)">
+            <span class=" text-xl font-bold text-gray-800">Indicators</span>
+            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-300 text-black text-2xl transition-transform">
+              <svg class="icon w-8 h-8 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"    d="M5 12h14" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"    d="M12 5v14" />
+              </svg>
+            </span>
+          </button>
+<div class="content hidden  bg-white  shadow-md border border-gray-200 max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 xl:px-12 ">
+  <p class="text-gray-800 text-lg leading-relaxed">
+    POLIAGENTX needs development indicators as one of its inputs. Ideally, you should collect time series of indicators across different policy dimensions (e.g., education, governance, poverty, health, pollution). These time series should cover the same sample period and should not have missing observations. Below is a template to help you structure your data.
+  </p>
+
+  <!-- Download button -->
+  <a 
+      href="your-template-file.pdf" 
+      download
+      class="mt-6 inline-flex items-center justify-center px-6 py-3 
+             bg-gradient-to-r from-blue-600/60 to-indigo-600/60 text-white font-semibold 
+             shadow-lg hover:from-blue-700 hover:to-indigo-700 hover:shadow-xl 
+             transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out"
+    >
+    
+    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+    </svg>
+    Download Template
+  </a>
+</div>
+
         </div>
-    </section> -->
+        <!-- Step 2 -->
+    <div class="overflow-hidden shadow-sm rounded-xl border border-gray-200">
+  <!-- Accordion Header -->
+  <button 
+    class="w-full flex justify-between items-center px-8 py-6 text-left font-semibold text-green-700 bg-[#e9eef3] hover:bg-gray-200 transition group focus:outline-none"
+    onclick="toggleAccordion(this)"
+  >
+    <span class="text-xl font-bold text-gray-800">Budget</span>
+    <span class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-300 text-black text-2xl transition-transform group-[.open]:rotate-45">
+      <svg class="icon w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 5v14" />
+      </svg>
+    </span>
+  </button>
 
-    <section id="team" class="bg-gray-100 ">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h1 class="text-3xl font-bold text-green-700">Meet the Team</h1>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10">
+  <!-- Accordion Content -->
+  <div class="content hidden bg-white shadow-inner border-t border-gray-200 px-6 py-6">
+    <p class="text-gray-800 text-lg leading-relaxed ">
+      There are two ways in which you can provide information about government expenditure. The first is by entering a total budget amount. This is useful when you do not have information about how the government expenditure is disaggregated. With this level of aggregation, the types of inferences that you can make will be limited to changes in the overall budget size.
+      <br><br>
+      The second option is to provide a file with the budget disaggregated into expenditure programmes using the template provided below.
+    </p>
+
+    <!-- Download button -->
+    <a 
+      href="your-template-file.pdf" 
+      download
+      class="mt-6 inline-flex items-center justify-center px-6 py-3 
+             bg-gradient-to-r from-blue-600/60 to-indigo-600/60 text-white font-semibold 
+             shadow-lg hover:from-blue-700 hover:to-indigo-700 hover:shadow-xl 
+             transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out"
+    >
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+      </svg>
+      Download Template
+    </a>
+  </div>
+</div>
+
+        <!-- Step 3 -->
+        <div class="overflow-hidden shadow-sm">
+           <button class="w-full flex justify-between items-center px-8 py-6 text-left font-semibold text-green-700 bg-[#e9eef3] hover:bg-gray-200 transition group focus:outline-none"
+            onclick="toggleAccordion(this)">
+            <span class="text-xl font-bold text-gray-800">Network</span>
+            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-300 text-black text-2xl transition-transform">
+              <svg class="icon w-8 h-8 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"    d="M5 12h14" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"    d="M12 5v14" />
+              </svg>
+            </span>
+          </button>
+          <div class="content hidden  bg-white  shadow-md border border-gray-200 max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 xl:px-12 ">
+  <p class="text-gray-800 text-lg leading-relaxed">
+   One of the model’s inputs is a network of conditional dependencies between all the indicators in the data. The user can provide a file containing a matrix that captures such network.
+  </p>
+
+  <!-- Download button -->
+ <a 
+      href="your-template-file.pdf" 
+      download
+      class="mt-6 inline-flex items-center justify-center px-6 py-3 
+             bg-gradient-to-r from-blue-600/60 to-indigo-600/60 text-white font-semibold 
+             shadow-lg hover:from-blue-700 hover:to-indigo-700 hover:shadow-xl 
+             transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out"
+    >
+    
+    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+    </svg>
+    Download Template
+  </a>
+</div>
+        </div>
+        <!-- Step 4 -->
+        <div class=" overflow-hidden shadow-sm">
+          <button class="w-full flex justify-between items-center px-8 py-6 text-left font-semibold text-green-700 bg-[#e9eef3] hover:bg-gray-200 transition group focus:outline-none"
+            onclick="toggleAccordion(this)">
+            <span class="text-xl font-bold text-gray-800">Calibration</span>
+            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-300 text-black text-2xl transition-transform">
+              <svg class="icon w-8 h-8 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"    d="M5 12h14" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"    d="M12 5v14" />
+              </svg>
+            </span>
+          </button>
+          <div class="content hidden px-8 pb-6 text-gray-700 bg-white text-lg">
+            Adjust model parameters using real-world data to better reflect Kenya’s socio-economic environment.
+          </div>
+        </div>
+        <!-- Step 5 -->
+        <div class=" overflow-hidden shadow-sm">
+ <button class="w-full flex justify-between items-center px-8 py-6 text-left font-semibold text-green-700 bg-[#e9eef3] hover:bg-gray-200 transition group focus:outline-none"
+            onclick="toggleAccordion(this)">
+            <span class="text-xl font-bold text-gray-800">Simulation</span>
+            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-300 text-black text-2xl transition-transform">
+              <svg class="icon w-8 h-8 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"    d="M5 12h14" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"    d="M12 5v14" />
+              </svg>
+            </span>
+          </button>          <div class="content hidden px-8 pb-6 text-gray-700 bg-white text-lg">
+            Run simulations to visualize how policies perform over time and under various conditions.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <div class="h-24"></div>
+
+    <!-- TEAM SECTION -->
+<section id="team" class="bg-gray-100 items-center">
+  <div class="min-h-screen w-full bg-gray-100">
+    <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 xl:px-12">
+      <div class="text-center mb-12">
+        <h1 class="text-3xl font-bold text-green-700 xl:text-5xl 2xl:text-6xl  bevel-text embossed-text">Meet the Team</h1>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-10 xl:gap-16 fade-in">
 
                 <div
-                    class=" text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col initial-hidden">
+                    class=" text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/lawrence.png" alt="Dr Lawrence Nderu"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
                     <h3 class="text-lg font-bold text-green-600">Dr Lawrence Nderu</h3>
                     <p class="text-sm text-black">Project PI</p>
                     <p class="text-sm text-black">Jomo Kenyatta University of Agriculture and Technology</p>
+                     <div class="flex justify-center gap-4 mt-4">
+                        <a href="https://www.linkedin.com/in/dr-lawrence-nderu/" target="_blank"
+                            class="text-blue-600 hover:text-blue-800 text-xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/DrLawrenceNderu" target="_blank"
+                            class="text-black hover:text-gray-700 text-xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col initial-hidden">
-                    <img src="Assets/Images/NGO.jpg" alt="George Ngiye"
+                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col ">
+                    <img src="Assets/Images/NGO1.png" alt="Image"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
                     <h3 class="text-lg font-bold text-green-600">George Ngiye</h3>
-                    <p class="text-sm text-gray-900 mt-2 flex-grow">Team Lead</p>
+                    <p class="text-sm text-black mt-2 flex-grow">Team Lead</p>
                     <p class="text-sm text-gray-700">Data Analytics</p>
                     <p class="text-sm text-gray-700">UI/UX designer</p>
                     <div class="flex justify-center gap-4 mt-4">
@@ -272,7 +340,7 @@
                     </div>
                 </div>
                 <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col initial-hidden">
+                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/lincoln.png" alt="Lincoln Muraguri"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
                     <h3 class="text-lg font-bold text-green-600">Lincoln Muraguri</h3>
@@ -289,7 +357,7 @@
                     </div>
                 </div>
                 <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col initial-hidden">
+                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/evan.jpg" alt="Sundra"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
                     <h3 class="text-lg font-bold text-green-600">Sundra Evans</h3>
@@ -305,9 +373,8 @@
                         </a>
                     </div>
                 </div>
-
                 <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col initial-hidden">
+                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/brian.jpeg" alt="Brian"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
                     <h3 class="text-lg font-bold text-green-600">Brian Kariuki</h3>
@@ -323,9 +390,8 @@
                         </a>
                     </div>
                 </div>
-
                 <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col initial-hidden">
+                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/picture.png" alt="Bridgit"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
                     <h3 class="text-lg font-bold text-green-600">Bridgit Kagendo</h3>
@@ -341,9 +407,8 @@
                         </a>
                     </div>
                 </div>
-
                 <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col initial-hidden">
+                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col ">
                     <img src="Assets/Images/hannah.jpg" alt="Hannah"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
                     <h3 class="text-lg font-bold text-green-600">Hannah Kibunja</h3>
@@ -359,232 +424,171 @@
                         </a>
                     </div>
                 </div>
-
                 <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col initial-hidden">
+                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/daniele.png" alt="Dr Daniele Guariso"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
                     <h3 class="text-lg font-bold text-green-600">Dr Daniele Guariso</h3>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">The Alan Turing Institute</p>
                 </div>
-
                 <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col initial-hidden">
+                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/rajab.png" alt="Mr Rajab Mbaruk"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
                     <h3 class="text-lg font-bold text-green-600">Mr Rajab Mbaruk</h3>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">Kenya National Bureau of Statistics</p>
                 </div>
-
                 <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col initial-hidden">
+                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/geofrey.png" alt="Mr Geoffrey Kagombe"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
                     <h3 class="text-lg font-bold text-green-600">Mr Geoffrey Kagombe</h3>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">Jomo Kenyatta University of Agriculture and Technology</p>
                 </div>
-
                 <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col initial-hidden">
+                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/patrick.png" alt="Dr Patrick Gikunda"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
                     <h3 class="text-lg font-bold text-green-600">Dr Patrick Gikunda</h3>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">Declan Kimathi University of Technology</p>
                 </div>
-
                 <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col initial-hidden">
+                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/leah.png" alt="Ms Leah Wambugu"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
                     <h3 class="text-lg font-bold text-green-600">Ms Leah Wambugu</h3>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">Kenya National Bureau of Statistics</p>
                 </div>
-
                 <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col initial-hidden">
+                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/linah.png" alt="Ms Linah Ngumba"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
                     <h3 class="text-lg font-bold text-green-600">Ms Linah Ngumba</h3>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">Kenya National Bureau of Statistics</p>
                 </div>
-
                 <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col initial-hidden">
+                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/macdonald.png" alt="Dr Macdonald Obudho"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
                     <h3 class="text-lg font-bold text-green-600">Dr Macdonald Obudho</h3>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">Kenya National Bureau of Statistics</p>
                 </div>
-
                 <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col initial-hidden">
+                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/benjamin.png" alt="Mr Benjamin Muchiri"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
                     <h3 class="text-lg font-bold text-green-600">Mr Benjamin Muchiri</h3>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">Kenya National Bureau of Statistics</p>
                 </div>
-
                 <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col initial-hidden">
+                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/hiram.png" alt="Mr Hiram Mbatia"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
                     <h3 class="text-lg font-bold text-green-600">Mr Hiram Mbatia</h3>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">Kenya National Bureau of Statistics</p>
-                </div>
-
+                    
+                 </div>
                 <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col initial-hidden">
+                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col ">
                     <img src="Assets/Images/samuel.png" alt="Mr Samuel Wanjau"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
                     <h3 class="text-lg font-bold text-green-600">Mr Samuel Wanjau</h3>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">African Centre for Technology Studies</p>
                 </div>
-
             </div>
+          </div>
         </div>
     </section>
 
-    <section id="Partners" class="min-h-screen mt-20">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h1 class="text-3xl font-bold text-green-700">Our Strategic Parners</h1>
+    <div class="h-24"></div>
+
+    <!-- PARTNERS SECTION -->
+<section id="Partners" class="min-h-screen">
+  <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 xl:px-12">
+    <div class="text-center mb-12">
+      <h1 class="text-3xl font-bold text-green-700 xl:text-5xl 2xl:text-6xl  bevel-text embossed-text">Our Strategic Partners</h1>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8 xl:gap-12">
+            <div
+                class="text-center bg-gray-100 p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
+                <img src="Assets/Images/jkuatlogo1.png" alt="JKUAT" class="h-12 mx-auto my-4" />
+                <h3 class="text-lg font-bold text-green-600">Jomo Kenyatta University of Agriculture and Technology (JKUAT)</h3>
+                <p class="text-gray-900 mt-2 font-semibold flex-grow">Project leadership and coordination</p>
+                <p class="text-gray-700 text-sm">Lead institution for public sector service delivery project</p>
+                <a href="https://www.jkuat.ac.ke/" target="_blank"
+                    class="block mt-4 text-black hover:text-green-900 text-sm font-semibold">Visit website
+                    ↗</a>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <div
-                    class="text-center bg-gray-100 p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
-                    <img src="Assets/Images/jkuatlogo1.png" alt="JKUAT" class="h-12 mx-auto my-4" />
-                    <h3 class="text-green-600 font-bold text-lg">Jomo Kenyatta University of Agriculture and Technology (JKUAT)</h3>
-                    <p class="text-gray-900 mt-2 font-semibold flex-grow">Project leadership and coordination</p>
-                    <p class="text-gray-700 text-sm">Lead institution for public sector service delivery project</p>
-                    <a href="https://www.jkuat.ac.ke/" target="_blank"
-                        class="block mt-4 text-green-700/80 hover:text-green-900 text-sm font-semibold">Visit website
-                        ↗</a>
-                </div>
+            <div
+                class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
+                <img src="Assets/Images/knbs.png" alt="KNBS" class="h-12 mx-auto my-4" />
+                <h3 class="text-lg font-bold text-green-600">Kenya National Bureau of Statistics</h3>
+                <p class="text-gray-900 mt-2 font-semibold flex-grow">Provided critical datasets for model
+                    calibration</p>
+                <p class="text-gray-700 text-sm">Kenya’s principal agency for statistical data collection and
+                    analysis</p>
+                <a href="https://www.knbs.or.ke" target="_blank"
+                    class="block mt-4 text-black hover:text-green-900 text-sm font-semibold">Visit website
+                    ↗</a>
+            </div>
 
-                <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
-                    <img src="Assets/Images/knbs.png" alt="KNBS" class="h-12 mx-auto my-4" />
-                    <h3 class="text-lg font-bold text-green-600">Kenya National Bureau of Statistics</h3>
-                    <p class="text-gray-900 mt-2 font-semibold flex-grow">Provided critical datasets for model
-                        calibration</p>
-                    <p class="text-gray-700 text-sm">Kenya’s principal agency for statistical data collection and
-                        analysis</p>
-                    <a href="https://www.knbs.or.ke" target="_blank"
-                        class="block mt-4 text-green-700/80 hover:text-green-900 text-sm font-semibold">Visit website
-                        ↗</a>
-                </div>
+            <div
+                class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
+                <img src="Assets/Images/kictanet.png" alt="KICTANet" class="h-12 mx-auto my-4" />
+                <h3 class="text-lg font-bold text-green-600">Kenya ICT Action Network</h3>
+                <p class="text-gray-900 mt-2 font-semibold flex-grow">Ensuring ICT considerations in policy impact
+                    assessment</p>
+                <p class="text-gray-700 text-sm">Digital policy and technology governance expertise</p>
+                <a href="https://www.kictanet.or.ke/" target="_blank"
+                    class="block mt-4 text-black hover:text-green-900 text-sm font-semibold">Visit website
+                    ↗</a>
+            </div>
 
-                <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
-                    <img src="Assets/Images/kictanet.png" alt="KICTANet" class="h-12 mx-auto my-4" />
-                    <h3 class="text-lg font-bold text-green-600">Kenya ICT Action Network</h3>
-                    <p class="text-gray-900 mt-2 font-semibold flex-grow">Ensuring ICT considerations in policy impact
-                        assessment</p>
-                    <p class="text-gray-700 text-sm">Digital policy and technology governance expertise</p>
-                    <a href="https://www.kictanet.or.ke/" target="_blank"
-                        class="block mt-4 text-green-700/80 hover:text-green-900 text-sm font-semibold">Visit website
-                        ↗</a>
-                </div>
+            <div
+                class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
+                <img src="Assets/Images/ids.png" alt="Institute of Development Studies" class="h-12 mx-auto my-4" />
+                <h3 class="text-lg font-bold text-green-600">Institute of Development Studies</h3>
+                <p class="text-gray-900 mt-2 font-semibold flex-grow">Shaping impact assessment frameworks</p>
+                <p class="text-gray-700 text-sm">Global development expertise</p>
+                <a href="https://www.ids.ac.uk/" target="_blank"
+                    class="block mt-4 text-black hover:text-green-900 text-sm font-semibold">Visit website
+                    ↗</a>
 
-                <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
-                    <img src="Assets/Images/ids.png" alt="Institute of Development Studies" class="h-12 mx-auto my-4" />
-                    <h3 class="text-lg font-bold text-green-600">Institute of Development Studies</h3>
-                    <p class="text-gray-900 mt-2 font-semibold flex-grow">Shaping impact assessment frameworks</p>
-                    <p class="text-gray-700 text-sm">Global development expertise</p>
-                    <a href="https://www.ids.ac.uk/" target="_blank"
-                        class="block mt-4 text-green-700/80 hover:text-green-900 text-sm font-semibold">Visit website
-                        ↗</a>
+            </div>
 
-                </div>
+            <div
+                class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
+                <img src="Assets/Images/acts.png" alt="African Centre for Technology Studies" class="h-12 mx-auto my-4" />
+                <h3 class="text-lg font-bold text-green-600">African Centre for Technology Studies</h3>
+                <p class="text-gray-900 mt-2 font-semibold flex-grow">Integrating technology change considerations
+                </p>
+                <p class="text-gray-700 text-sm">Knowledge for better livelihoods</p>
+                <a href="https://acts-net.org/" target="_blank"
+                    class="block mt-4 text-black hover:text-green-900 text-sm font-semibold">Visit website
+                    ↗</a>
+            </div>
 
-                <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
-                    <img src="Assets/Images/acts.png" alt="African Centre for Technology Studies" class="h-12 mx-auto my-4" />
-                    <h3 class="text-lg font-bold text-green-600">African Centre for Technology Studies</h3>
-                    <p class="text-gray-900 mt-2 font-semibold flex-grow">Integrating technology change considerations
-                    </p>
-                    <p class="text-gray-700 text-sm">Knowledge for better livelihoods</p>
-                    <a href="https://acts-net.org/" target="_blank"
-                        class="block mt-4 text-green-700/80 hover:text-green-900 text-sm font-semibold">Visit website
-                        ↗</a>
-                </div>
-
-                <div
-                    class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
-                    <img src="Assets/Images/JHUB-Logo-transparent.webp" alt="JHUB Africa Logo" class="h-12 mx-auto my-4" />
-                    <h3 class="text-lg font-bold text-green-600">JHUB Africa</h3>
-                    <p class="text-gray-900 mt-2 font-semibold flex-grow">Digital Innovation Hub</p>
-                    <a href="https://jhubafrica.com" target="_blank"
-                        class="block mt-4 text-green-700/80 hover:text-green-900 text-sm font-semibold">Visit website
-                        ↗</a>
-                </div>
-
+            <div
+                class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
+                <img src="Assets/Images/JHUB-Logo-transparent.webp" alt="JHUB Africa Logo" class="h-12 mx-auto my-4" />
+                <h3 class="text-lg font-bold text-green-600">JHUB Africa</h3>
+                <p class="text-gray-900 mt-2 font-semibold flex-grow">Digital Innovation Hub</p>
+                <a href="https://jhubafrica.com" target="_blank"
+                    class="block mt-4 text-black hover:text-green-900 text-sm font-semibold">Visit website
+                    ↗</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            $("a[href^='#']").on("click", function (e) {
-                e.preventDefault();
-                const target = $($(this).attr("href"));
-                if (target.length) {
-                    $("html, body").animate({
-                        scrollTop: target.offset().top - 60,
-                    }, 200);
-                }
-            });
-
-            $(window).on("scroll", function () {
-                if ($(window).scrollTop() > 50) {
-                    $("header").addClass("sticky top-0 bg-white shadow-lg z-50");
-                } else {
-                    $("header").removeClass("sticky top-0 bg-white shadow-lg z-50");
-                    $("header").addClass("bg-white text-gray-900");
-                }
-            });
-
-            const cards = document.querySelectorAll('.initial-hidden');
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const cardIndex = Array.from(entry.target.parentNode.children).indexOf(entry.target);
-                        let animationClass = 'animate-fade-in';
-                        if (cardIndex % 3 === 0) {
-                            animationClass = 'animate-slide-in-left';
-                        } else if (cardIndex % 3 === 1) {
-                            animationClass = 'animate-fade-in';
-                        } else {
-                            animationClass = 'animate-slide-in-right';
-                        }
-                        if (entry.target.closest('#about') && cardIndex % 4 === 0) {
-                            animationClass = 'animate-slide-in-left';
-                        } else if (entry.target.closest('#about') && cardIndex % 4 === 3) {
-                            animationClass = 'animate-slide-in-right';
-                        } else if (entry.target.closest('#about')) {
-                            animationClass = 'animate-fade-in';
-                        }
-
-
-                        entry.target.classList.remove('initial-hidden');
-                        entry.target.classList.add(animationClass);
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.2
-            });
-
-            cards.forEach(card => {
-                observer.observe(card);
-            });
-        });
-    </script>
+<script src="Assets/Js/accordion.js"></script>
+<script src="Assets/Js/core.js"></script>
+<script src="Assets/Js/main.js"></script>
+<script src="Assets/Js/animation.js"></script>
+<script src="Assets/Js/toggle.js"></script>
 </body>
 
 </html>
