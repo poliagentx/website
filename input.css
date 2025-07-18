@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding-bottom: 0;
+  /* Responsive scroll margin for sticky header */
+  scroll-margin-top: 70px;
+}
+
+#home, #about, #features, #team, #Partners {
+  padding-top: 0;
+}
+
+/* Responsive container for largest screens */
+.container,
+.max-w-7xl {
+  width: 100%;
+  max-width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 1280px) {
+  .max-w-7xl {
+    max-width: 80rem; /* 1280px */
+  }
+}
+@media (min-width: 1536px) {
+  .2xl\:max-w-screen-2xl {
+    max-width: 1536px;
+  }
+}
+
+/* Responsive grid gaps for large screens */
+.grid {
+  gap: 2rem;
+}
+@media (min-width: 1280px) {
+  .grid {
+    gap: 3rem;
+  }
+}
+@media (min-width: 1536px) {
+  .grid {
+    gap: 4rem;
+  }
+}
+
+/* Responsive text sizes */
+.responsive-title {
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  .responsive-title {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .responsive-title {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 1536px) {
+  .responsive-title {
+    font-size: 5rem;
+  }
+}
+
+html {
+    scroll-behavior: auto; 
+  }
+  body {
+    overflow: hidden;      
+    opacity: 0;            
+    transition: opacity 0.1s ease;
+  }
+  body.ready {
+    overflow: auto;
+    opacity: 1;          
+  }
+    header {
+        height: 70px;
+        min-height: 70px;
+        max-height: 70px;
+      }
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+.slide {
+  transition: opacity 0.5s;
+}
+.slide.hidden {
+  display: none;
+  opacity: 0;
+}
+.slide.block {
+  display: block;
+  opacity: 1;
+}
+
+/* Ensure header content aligns with main containers */
+header > nav {
+  max-width: 80rem; /* Matches .max-w-7xl */
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 1536px) {
+  header > nav {
+    max-width: 1536px; /* Matches .2xl\:max-w-screen-2xl */
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+.bevel-text {
+
+  
+  text-shadow:
+    /* highlight edges */
+    -2px -2px 2px rgba(255, 255, 255, 0.8),
+    2px 2px 4px rgba(0, 0, 0, 0.4),
+    /* inner subtle contour */
+    1px 1px 0 rgba(0,0,0,0.2),
+    -1px -1px 0 rgba(255,255,255,0.6);
+  letter-spacing: 1px;
+  
+}
+.embossed-text {
+     
+      text-shadow:
+        -2px -2px 3px #ffffff, /* light from top-left */
+         2px  2px 4px #a3a3a3; /* shadow bottom-right */
+    }
+
