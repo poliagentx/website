@@ -176,4 +176,12 @@ header > nav {
         -2px -2px 3px #ffffff, /* light from top-left */
          2px  2px 4px #a3a3a3; /* shadow bottom-right */
     }
-
+    .rounded-button {
+      background-color: #424a58;
+      color: white;
+      padding: 12px 24px;
+      font-weight: bold;
+      border-radius: 999px; /* Fully rounded (pill shape) */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
