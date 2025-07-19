@@ -1237,7 +1237,7 @@ header > nav {
 @property --tw-gradient-from {
   syntax: "<color>";
   inherits: false;
-  initial-value: #0000;
+  initial-value: #000000;
 }
 @property --tw-gradient-via {
   syntax: "<color>";
