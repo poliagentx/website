@@ -18,10 +18,10 @@
 
 </head>
 
-<body class="font-[Poppins] bg-white-100 min-h-screen flex flex-col">
+<body class="prose font-[Poppins] bg-[#f2f2f2] min-h-screen flex flex-col">
   <main class="flex-grow">
 
-    <header class="sticky top-0 bg-white text-gray-900 transition-all duration-300 z-50 backdrop-blur-md shadow-md">
+    <header class="sticky top-0 bg-[#f2f2f2] text-gray-900 transition-all duration-300 z-50 outline-1 outline-[#cb8700] backdrop-blur-md shadow-md ">
       <nav class="max-w-6xl mx-auto flex items-center justify-between h-full px-4 md:px-6 lg:px-0" style="height: 70px;">
         <div class="flex items-center gap-2">
           <span class="text-xl font-semibold ">POLIAGENTX</span>
@@ -31,7 +31,7 @@
 <button
   id="menu-toggle"
   onclick="toggleMenu()"
-  class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
+  class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#838383] transition-colors"
 >
   <svg id="menu-open-icon" class="w-8 h-8 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -44,7 +44,7 @@
 </button>
 
 
-<!-- ✅ Mobile menu -->
+
 <ul
   id="menu"
   class="hidden md:flex flex-col md:flex-row gap-6 md:items-center absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent text-black shadow md:shadow-none z-50 px-6 py-4 md:p-0"
@@ -58,10 +58,10 @@
     <button
       id="get-started-btn"
       onclick="alert('Coming soon')"
-      class="bg-[#424a58] hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-xl shadow-lg transition duration-300"
+      class="bg-[#cb8700] hover:bg-green-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg transition duration-300"
     >
       Get Started
-    </button>
+  </button>
   </li>
 </ul>
         </nav>
@@ -78,7 +78,7 @@
     
             <div class="text-center md:text-left w-full md:w-1/2">
                 <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight mb-6">
-                    <span class="  text-black">Design a better future</span> <span class=" text-[#cb8700] bevel-text">through</span> <span class="text-black  ">simulations</span>
+                    <span class="  text-black leading-relaxed">Design a better future</span> <span class=" text-[#cb8700] leading-relaxed bevel-text">through</span> <span class="text-black  leading-relaxed">simulations</span>
                 </h1>
                 <p class="text-lg sm:text-xl text-black leading-relaxed max-w-lg mx-auto md:mx-0 mb-8 ">
                     simplifies evaluation and analysis of policies through interactive simulations and real-time data visualizations
@@ -90,11 +90,12 @@
     </section>
 
     <!-- ABOUT SECTION -->
-<section id="about" class="min-h-screen w-full bg-gray-100">
-  <div class="bg-[#f2f2f2f2] w-full">
+<section id="about" class="min-h-screen w-full bg-[#f2f2f2]">
+      
+  <div class="bg-[#f2f2f2] w-full">
     <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 xl:px-12 py-12 text-center">
-      <h1 class="xl:text-5xl 2xl:text-6xl  text-[#cb8700] mb-4  embossed-text bevel-text">About Us</h1>
-      <p class="text-lg md:text-xl xl:text-2xl text-[#000000] leading-relaxed max-w-2xl mx-auto embossed-text bevel-text">
+      <h1 class="text-3xl xl:text-5xl 2xl:text-6xl  text-[#cb8700] mb-4  embossed-text bevel-text">About Us</h1>
+       <p class="sm:text-xl leading-relaxed max-w-xl mx-auto embossed-text bevel-text">
         Explore more about our project
       </p>
     </div>
@@ -110,7 +111,7 @@
             </p>
           </div>
         
-          <div class="bg-white p-7 rounded-2xl shadow-xl">
+          <div class="bg-white p-7 rounded-2xl shadow-xl ">
             <div class="text-green-600 text-4xl mb-4"><i class="fas fa-lightbulb"></i></div>
             <h2 class="text-2xl font-bold text-gray-800 mb-3">The Solution</h2>
             <p class="text-gray-600">
@@ -144,8 +145,8 @@
   <!-- Features Intro -->
   <div class="bg-[#f2f2f2] w-full">
     <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 xl:px-12 py-12 text-center">
-      <h1 class=" xl:text-5xl 2xl:text-6xl  text-[#cb8700] mb-4 embossed-text bevel-text">Model Components</h1>
-      <p class="sm:text-xl leading-relaxed max-w-2xl mx-auto embossed-text bevel-text">
+      <h1 class="text-3xl xl:text-5xl 2xl:text-6xl  text-[#cb8700] mb-4 embossed-text bevel-text">Model Components</h1>
+      <p class="sm:text-xl leading-relaxed max-w-xl mx-auto embossed-text bevel-text">
         Core POLIAGENTX's model components
       </p>
     </div>
@@ -178,9 +179,9 @@
       href="Assets/File/template_indicators.xlsx" 
       download
       class="mt-6 inline-flex items-center justify-center px-6 py-3 
-             bg-gradient-to-r from-blue-600/60 to-indigo-600/60 text-white font-semibold 
-             shadow-lg hover:from-blue-700 hover:to-indigo-700 hover:shadow-xl 
-             transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out"
+             bg-[#cb8700]  text-white font-semibold 
+             hover:shadow-xl 
+             transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out "
     >
     
     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -220,8 +221,8 @@
       href="Assets/File/template_budget.xlsx" 
       download
       class="mt-6 inline-flex items-center justify-center px-6 py-3 
-             bg-gradient-to-r from-blue-600/60 to-indigo-600/60 text-white font-semibold 
-             shadow-lg hover:from-blue-700 hover:to-indigo-700 hover:shadow-xl 
+             bg-[#cb8700]  text-white font-semibold 
+             hover:shadow-xl 
              transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out"
     >
       <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -253,8 +254,8 @@
  <a href="Assets/File/template_network.xlsx" 
       download
       class="mt-6 inline-flex items-center justify-center px-6 py-3 
-             bg-gradient-to-r from-blue-600/60 to-indigo-600/60 text-white font-semibold 
-             shadow-lg hover:from-blue-700 hover:to-indigo-700 hover:shadow-xl 
+             bg-[#cb8700]  text-white font-semibold 
+             hover:shadow-xl 
              transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out"
     >
     
@@ -306,12 +307,12 @@
     <div class="h-24"></div>
 
     <!-- TEAM SECTION -->
-<section id="team" class="bg-gray-100 items-center">
+<section id="team" class="bg-[#f2f2f2] items-center">
   <div class="min-h-screen w-full bg-gray-100">
     <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 xl:px-12">
       <div class="text-center mb-12">
-        <h1 class="text-3xl font-bold text-[#cb8700] xl:text-5xl 2xl:text-6xl  bevel-text embossed-text">Meet the Team</h1>
-        <p class="sm:text-xl leading-relaxed max-w-2xl mx-auto embossed-text bevel-text">The brains behind the project</p>
+        <h1 class="text-3xl  text-[#cb8700] xl:text-5xl 2xl:text-6xl  bevel-text embossed-text">Meet the Team</h1>
+        <p class="sm:text-xl leading-relaxed max-w-xl mx-auto embossed-text bevel-text">The brains behind the project</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-10 xl:gap-16 fade-in">
 
@@ -517,15 +518,15 @@
     <div class="h-24"></div>
 
     <!-- PARTNERS SECTION -->
-<section id="Partners" class="min-h-screen">
+<section id="Partners" class="min-h-screen bg-[#f2f2f2]">
   <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 xl:px-12">
     <div class="text-center mb-12">
       <h1 class="text-3xl  text-[#cb8700] xl:text-5xl 2xl:text-6xl  bevel-text embossed-text">Our Strategic Partners</h1>
-      <p class="sm:text-xl leading-relaxed max-w-2xl mx-auto embossed-text bevel-text">We’re grateful for the partners supporting our mission.</p>
+      <p class="sm:text-xl leading-relaxed max-w-xl mx-auto embossed-text bevel-text">We’re grateful for the partners supporting our mission.</p>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8 xl:gap-12">
             <div
-                class="text-center bg-white-900 p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
+               class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                 <img src="Assets/Images/jkuatlogo1.png" alt="JKUAT" class="h-12 mx-auto my-4" />
                 <h3 class="text-lg font-bold text-green-600">Jomo Kenyatta University of Agriculture and Technology (JKUAT)</h3>
                 <p class="text-gray-900 mt-2 font-semibold flex-grow">Project leadership and coordination</p>
@@ -589,6 +590,7 @@
                 <img src="Assets/Images/JHUB-Logo-transparent.webp" alt="JHUB Africa Logo" class="h-12 mx-auto my-4" />
                 <h3 class="text-lg font-bold text-green-600">JHUB Africa</h3>
                 <p class="text-gray-900 mt-2 font-semibold flex-grow">Digital Innovation Hub</p>
+                <p class="text-gray-700 text-sm">Lead digital hub for public sector service delivery project</p>
                 <a href="https://jhubafrica.com" target="_blank"
                     class="block mt-4 text-black hover:text-green-900 text-sm font-semibold">Visit website
                     ↗</a>
@@ -599,30 +601,30 @@
 
  <div class="h-24"></div>
 <!-- <div class="max-w-7xl mx-auto my-5"> -->
-  <footer class="text-center text-lg-start bg-[#838383]">
+  <footer class="text-center text-lg-start bg-[#616161] outline-1 outline-[#000000] ">
     <!-- Social buttons -->
     <div class=" flex justify-center py-5 space-x-4 ">
      <!-- <div class="flex md:justify-end justify-center items-center space-x-4"> -->
       <a href="https://www.linkedin.com/company/jhubafrica/" target="jhubafrica"
          class="w-12 h-12 flex items-center justify-center rounded-full text-xl shadow-md hover:opacity-90 transition"
-         style="background-color:#54456b;">
+         style="background-color:#919191;">
         <i class="fab fa-linkedin-in"></i>
       </a>
       <a href="https://www.facebook.com/JHUBAfrica/" target="jhubafrica"
          class="w-12 h-12 flex items-center justify-center rounded-full text-xl shadow-md hover:opacity-90 transition"
-         style="background-color:#54456b;">
+         style="background-color:#919191;">
         <i class="fab fa-facebook-f"></i>
       </a>
       
       <a href="https://x.com/JHUBAfrica" target="_blank"
          class="w-12 h-12 flex items-center justify-center rounded-full text-xl shadow-md hover:opacity-90 transition"
-         style="background-color:#54456b;">
+         style="background-color:#919191;">
         <i class="fab fa-twitter"></i>
       </a>
     </div>
 
     <!-- Copyright -->
-    <div class="text-center text-white p-3" style="background-color: rgba(0,0,0,0.2);">
+    <div class="text-center text-[#f7f7f7] p-3" style="background-color: rgba(0,0,0,0.2);">
       © 2025
     </div>
   </footer>
