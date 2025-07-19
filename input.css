@@ -172,9 +172,18 @@ header > nav {
   
 }
 .embossed-text {
-     
-      text-shadow:
-        -2px -2px 3px #ffffff, /* light from top-left */
-         2px  2px 4px #a3a3a3; /* shadow bottom-right */
-    }
+  @apply text-base; /* Or whatever text style you prefer */
+  text-shadow:
+    /* -2px -2px 3px #ffffff, default: light shadow */
+     2px  2px 4px #a3a3a3;
+}
 
+.dark .embossed-text {
+  text-shadow:
+    -2px -2px 3px #000 /* dark mode: dark shadow */
+     2px  2px 4px #a3a3a3;
+}
+
+button,a{
+  @apply transition-colors duration-300;
+}
