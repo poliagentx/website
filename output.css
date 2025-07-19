@@ -1112,7 +1112,7 @@ header > nav {
 .embossed-text {
   font-size: var(--text-base);
   line-height: var(--tw-leading, var(--text-base--line-height));
-  text-shadow: -2px -2px 3px #ffffff,  2px 2px 4px #a3a3a3;
+  text-shadow: 2px 2px 4px #a3a3a3;
 }
 .dark .embossed-text {
   text-shadow: -2px -2px 3px #000000,  2px 2px 4px #a3a3a3;
