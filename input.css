@@ -18,8 +18,8 @@
   --color-bg-footer: #616161; /* Original footer background */
   --color-bg-footer-overlay: rgba(0,0,0,0.2); /* Footer text background */
   --color-bg-blue-300: #93c5fd; /* Original blue-300 for accordion icons */
-  --color-bg-orange-600: #f97316; /* For download buttons */
-  --color-bg-orange-700: #ea580c; /* For download buttons hover */
+  --color-bg-orange-600: #cb8700; /* For download buttons */
+  --color-bg-orange-700: #cb8700; /* For download buttons hover */
 
 
   /* Text Colors */
@@ -53,15 +53,15 @@ html.dark {
   --color-bg-footer: #1a202c; /* gray-900 for footer */
   --color-bg-footer-overlay: rgba(0,0,0,0.5); /* Darker overlay for footer text */
   --color-bg-blue-300: #2563eb; /* blue-600 for accordion icons */
-  --color-bg-orange-600: #ea580c; /* For download buttons in dark mode */
-  --color-bg-orange-700: #f97316; /* For download buttons hover in dark mode */
+  --color-bg-orange-600: #cb8700; /* For download buttons in dark mode */
+  --color-bg-orange-700: #cb8700; /* For download buttons hover in dark mode */
 
 
   /* Text Colors */
   --color-text-primary: #e2e8f0; /* gray-100 */
   --color-text-secondary: #cbd5e1; /* gray-300 */
   --color-text-button: #e2e8f0; /* gray-100 */
-  --color-text-header: #e2e8f0; /* Header text */
+  --color-text-header: #f2f2f2; /* Header text */
   --color-text-footer: #cbd5e1; /* gray-300 for footer text */
   --color-text-orange: #cb8700; /* orange-400 */
   --color-text-green-600: #4ade80; /* green-400 */
