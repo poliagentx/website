@@ -1,7 +1,6 @@
 /* output.css */
 
 @import "tailwindcss";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -64,7 +63,7 @@ html.dark {
   --color-text-button: #e2e8f0; /* gray-100 */
   --color-text-header: #e2e8f0; /* Header text */
   --color-text-footer: #cbd5e1; /* gray-300 for footer text */
-  --color-text-orange: #fb923c; /* orange-400 */
+  --color-text-orange: #cb8700; /* orange-400 */
   --color-text-green-600: #4ade80; /* green-400 */
   --color-text-blue-600: #60a5fa; /* blue-400 */
   --color-text-red-600: #ef4444; /* red-500 */
@@ -209,7 +208,7 @@ section {
 
 
 /* Team Member Text */
-#team h3 {
+#team h2 {
   color: var(--color-text-green-600);
 }
 #team p {

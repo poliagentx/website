@@ -276,11 +276,11 @@
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
-  .mb-5 {
-    margin-bottom: calc(var(--spacing) * 5);
-  }
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
+  }
+  .mb-7 {
+    margin-bottom: calc(var(--spacing) * 7);
   }
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
@@ -559,12 +559,6 @@
   }
   .font-\[Poppins\] {
     font-family: Poppins;
-  }
-  .font-\[R\] {
-    font-family: R;
-  }
-  .font-\[Robboto\] {
-    font-family: Robboto;
   }
   .font-\[Roboto\] {
     font-family: Roboto;
@@ -939,10 +933,10 @@
       text-align: left;
     }
   }
-  .md\:text-5xl {
+  .md\:text-xl {
     @media (width >= 48rem) {
-      font-size: var(--text-5xl);
-      line-height: var(--tw-leading, var(--text-5xl--line-height));
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
   .md\:shadow-none {
@@ -1058,7 +1052,7 @@ html.dark {
   --color-text-button: #e2e8f0;
   --color-text-header: #e2e8f0;
   --color-text-footer: #cbd5e1;
-  --color-text-orange: #fb923c;
+  --color-text-orange: #cb8700;
   --color-text-green-600: #4ade80;
   --color-text-blue-600: #60a5fa;
   --color-text-red-600: #ef4444;
@@ -1177,7 +1171,7 @@ section {
 .content a.bg-\[\#cb8700\]:hover {
   background-color: var(--color-bg-orange-700);
 }
-#team h3 {
+#team h2 {
   color: var(--color-text-green-600);
 }
 #team p {
