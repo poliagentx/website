@@ -454,10 +454,19 @@
     border-top-style: var(--tw-border-style);
     border-top-width: 1px;
   }
+  .border-gray-100 {
+    border-color: var(--color-gray-100);
+  }
   .border-gray-100\/30 {
     border-color: color-mix(in srgb, oklch(96.7% 0.003 264.542) 30%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       border-color: color-mix(in oklab, var(--color-gray-100) 30%, transparent);
+    }
+  }
+  .border-gray-100\/300 {
+    border-color: color-mix(in srgb, oklch(96.7% 0.003 264.542) 300%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-gray-100) 300%, transparent);
     }
   }
   .border-gray-200 {
