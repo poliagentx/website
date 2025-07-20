@@ -16,6 +16,19 @@
   
 
 
+     <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        })();
+    </script>
+
 </head>
 
 <body class="prose font-[Poppins] bg-[#f2f2f2] min-h-screen flex flex-col dark">
@@ -100,7 +113,7 @@
   <div class=" w-full">
     <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 xl:px-12 py-12 text-center">
       <h1 class="text-2xl xl:text-5xl 2xl:text-6xl  text-[#cb8700] mb-4  bevel-text">About Us</h1>
-       <p class="sm:text-xl leading-relaxed max-w-xl mx-auto  bevel-text">
+       <p class="sm:text-xl leading-relaxed max-w-xl mx-auto ">
         Explore more about our project
       </p>
     </div>
@@ -120,7 +133,7 @@
             <div class="text-green-600 text-4xl mb-4"><i class="fas fa-lightbulb"></i></div>
             <h2 class="text-2xl font-bold text-gray-800 mb-3">The Solution</h2>
             <p class="text-gray-600">
-              PoliAgentX simplifies evaluation and analysis of policies through simulations.
+              With our app evaluation and analysis of policies are simplified.All within a few clicks
             </p>
           </div>
         
@@ -151,7 +164,7 @@
   <div class=" w-full">
     <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 xl:px-12 py-12 text-center">
       <h1 class="text-2xl xl:text-5xl 2xl:text-6xl  text-[#cb8700] mb-4  bevel-text">Model Components</h1>
-      <p class="sm:text-xl leading-relaxed max-w-xl mx-auto  bevel-text">
+      <p class="sm:text-xl leading-relaxed max-w-xl mx-auto  ">
         Core POLIAGENTX's model components
       </p>
     </div>
@@ -160,7 +173,7 @@
 
 
     <!-- Collapsible Accordion Steps -->
-    <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 xl:px-12" >
+<div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 xl:px-12" >
       <div id="accordion-parent" class="space-y-8">
         <!-- Step 1 -->
         <div class="overflow-hidden shadow-sm">
@@ -198,7 +211,7 @@
 
         </div>
         <!-- Step 2 -->
-  <div class="overflow-hidden shadow-sm ">
+    <div class="overflow-hidden shadow-sm rounded-xl border border-gray-200">
   <!-- Accordion Header -->
   <button 
     class="w-full flex justify-between items-center px-8 py-6 text-left font-semibold text-green-700 bg-[#e9eef3] hover:bg-gray-200 transition group focus:outline-none"
@@ -298,7 +311,8 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"    d="M12 5v14" />
               </svg>
             </span>
-          </button>          <div class="content hidden px-8 pb-6 text-gray-700 bg-white text-lg">
+          </button>          
+          <div class="content hidden px-8 pb-6 text-gray-700 bg-white text-lg">
             Run simulations to visualize how policies perform over time and under various conditions.
           </div>
         </div>
@@ -316,8 +330,8 @@
   <div class="min-h-screen w-full">
     <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 xl:px-12">
       <div class="text-center mb-12">
-        <h1 class="text-2xl  text-[#cb8700] xl:text-5xl 2xl:text-6xl  bevel-text ">Meet the Team</h1>
-        <p class="sm:text-xl leading-relaxed max-w-xl mx-auto bevel-text">The brains behind the project</p>
+        <h1 class="text-2xl  text-[#cb8700] xl:text-5xl 2xl:text-6xl">Meet the Team</h1>
+        <p class="sm:text-xl leading-relaxed max-w-xl mx-auto ">The brains behind the project</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-10 xl:gap-16 fade-in">
 
@@ -325,7 +339,7 @@
                     class=" text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/lawrence.png" alt="Dr Lawrence Nderu"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
-                    <h3 class="text-lg font-bold text-green-600">Dr Lawrence Nderu</h3>
+                    <h2 class="text-lg font-bold text-green-600">Dr Lawrence Nderu</h2>
                     <p class="text-sm text-black">Project PI</p>
                     <p class="text-sm text-black">Jomo Kenyatta University of Agriculture and Technology</p>
                      <div class="flex justify-center gap-4 mt-4">
@@ -344,7 +358,8 @@
                     class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col ">
                     <img src="Assets/Images/NGO1.png" alt="Image"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
-                    <h3 class="text-lg font-bold text-green-600">George Ngiye</h3>
+                    <h2 class="text-lg font-bold text-green-600">George Ngiye</h2
+                      >
                     <p class="text-sm text-black mt-2 flex-grow">Team Lead</p>
                     <p class="text-sm text-gray-700">Data Analyst</p>
                     <p class="text-sm text-gray-700">UI/UX designer</p>
@@ -363,7 +378,7 @@
                     class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/lincoln.png" alt="Lincoln Muraguri"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
-                    <h3 class="text-lg font-bold text-green-600">Lincoln Muraguri</h3>
+                    <h2 class="text-lg font-bold text-green-600">Lincoln Muraguri</h2>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">Backend Developer</p>
                     <div class="flex justify-center gap-4 mt-4">
                         <a href="https://www.linkedin.com/in/lincoln-muraguri-555655368" target="_blank"
@@ -380,7 +395,7 @@
                     class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/evan.jpg" alt="Sundra"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
-                    <h3 class="text-lg font-bold text-green-600">Sundra Evans</h3>
+                    <h2 class="text-lg font-bold text-green-600">Sundra Evans</h2>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">Front-end Developer</p>
                     <div class="flex justify-center gap-4 mt-4">
                         <a href="https://www.linkedin.com/in/sundra-evans-39490a313" target="_blank"
@@ -397,7 +412,7 @@
                     class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/brian.jpeg" alt="Brian"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
-                    <h3 class="text-lg font-bold text-green-600">Brian Kariuki</h3>
+                    <h2 class="text-lg font-bold text-green-600">Brian Kariuki</h2>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">UI/UX designer</p>
                     <div class="flex justify-center gap-4 mt-4">
                         <a href="https://www.linkedin.com/in/brian-kariuki" target="_blank"
@@ -414,7 +429,7 @@
                     class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/picture.png" alt="Bridgit"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
-                    <h3 class="text-lg font-bold text-green-600">Bridgit Kagendo</h3>
+                    <h2 class="text-lg font-bold text-green-600">Bridgit Kagendo</h2>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">Front-end Developer</p>
                     <div class="flex justify-center gap-4 mt-4">
                         <a href="https://www.linkedin.com/in/bridgit-kagendo" target="_blank"
@@ -431,7 +446,7 @@
                     class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col ">
                     <img src="Assets/Images/hannah.jpg" alt="Hannah"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
-                    <h3 class="text-lg font-bold text-green-600">Hannah Kibunja</h3>
+                    <h2 class="text-lg font-bold text-green-600">Hannah Kibunja</h2>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">communication specialist</p>
                     <div class="flex justify-center gap-4 mt-4">
                         <a href="https://www.linkedin.com/in/hannah-kibunja-471261330" target="_blank"
@@ -448,21 +463,21 @@
                     class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/daniele.png" alt="Dr Daniele Guariso"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
-                    <h3 class="text-lg font-bold text-green-600">Dr Daniele Guariso</h3>
+                    <h2 class="text-lg font-bold text-green-600">Dr Daniele Guariso</h2>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">The Alan Turing Institute</p>
                 </div>
                 <div
                     class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/rajab.png" alt="Mr Rajab Mbaruk"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
-                    <h3 class="text-lg font-bold text-green-600">Mr Rajab Mbaruk</h3>
+                    <h2 class="text-lg font-bold text-green-600">Mr Rajab Mbaruk</h2>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">Kenya National Bureau of Statistics</p>
                 </div>
                 <div
                     class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/geofrey.png" alt="Mr Geoffrey Kagombe"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
-                    <h3 class="text-lg font-bold text-green-600">Mr Geoffrey Kagombe</h3>
+                    <h2 class="text-lg font-bold text-green-600">Mr Geoffrey Kagombe</h2>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">Jomo Kenyatta University of Agriculture and Technology</p>
                 </div>
                 <div
@@ -476,35 +491,35 @@
                     class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/leah.png" alt="Ms Leah Wambugu"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
-                    <h3 class="text-lg font-bold text-green-600">Ms Leah Wambugu</h3>
+                    <h2 class="text-lg font-bold text-green-600">Ms Leah Wambugu</h2>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">Kenya National Bureau of Statistics</p>
                 </div>
                 <div
                     class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/linah.png" alt="Ms Linah Ngumba"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
-                    <h3 class="text-lg font-bold text-green-600">Ms Linah Ngumba</h3>
+                    <h2 class="text-lg font-bold text-green-600">Ms Linah Ngumba</h2>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">Kenya National Bureau of Statistics</p>
                 </div>
                 <div
                     class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/macdonald.png" alt="Dr Macdonald Obudho"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
-                    <h3 class="text-lg font-bold text-green-600">Dr Macdonald Obudho</h3>
+                    <h2 class="text-lg font-bold text-green-600">Dr Macdonald Obudho</h2>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">Kenya National Bureau of Statistics</p>
                 </div>
                 <div
                     class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/benjamin.png" alt="Mr Benjamin Muchiri"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
-                    <h3 class="text-lg font-bold text-green-600">Mr Benjamin Muchiri</h3>
+                    <h2 class="text-lg font-bold text-green-600">Mr Benjamin Muchiri</h2>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">Kenya National Bureau of Statistics</p>
                 </div>
                 <div
                     class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col">
                     <img src="Assets/Images/hiram.png" alt="Mr Hiram Mbatia"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
-                    <h3 class="text-lg font-bold text-green-600">Mr Hiram Mbatia</h3>
+                    <h2 class="text-lg font-bold text-green-600">Mr Hiram Mbatia</h2>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">Kenya National Bureau of Statistics</p>
                     
                  </div>
@@ -512,7 +527,7 @@
                     class="text-center bg-white p-8 rounded-2xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2 hover:shadow-xl backdrop-blur-md h-full flex flex-col ">
                     <img src="Assets/Images/samuel.png" alt="Mr Samuel Wanjau"
                         class="w-24 h-24 rounded-full mx-auto my-4 object-cover border-2 border-gray-300" />
-                    <h3 class="text-lg font-bold text-green-600">Mr Samuel Wanjau</h3>
+                    <h2 class="text-lg font-bold text-green-600">Mr Samuel Wanjau</h2>
                     <p class="text-sm text-gray-700 mt-2 flex-grow">African Centre for Technology Studies</p>
                 </div>
             </div>
@@ -523,11 +538,11 @@
     <div class="h-24"></div>
 
     <!-- PARTNERS SECTION -->
-<section id="Partners" class="min-h-screen bg-[#f2f2f2]">
+<section id="Partners" class="min-h-screen ">
   <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-4 xl:px-12">
     <div class="text-center mb-12">
-      <h1 class="text-2xl  text-[#cb8700] xl:text-5xl 2xl:text-6xl  bevel-text">Our Strategic Partners</h1>
-       <p class="sm:text-xl leading-relaxed max-w-xl mx-auto bevel-text text-black">We’re grateful for the partners supporting our mission.</p>
+      <h1 class="text-2xl  xl:text-5xl 2xl:text-6xl bevel-text">Our Strategic Partners</h1>
+      <p class="sm:text-xl leading-relaxed max-w-xl mx-auto ">We’re grateful for the partners supporting our mission.</p>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-6 gap-8 xl:gap-12">
             <div
@@ -607,8 +622,8 @@
 
     <div class="w-full flex justify-center items-center px-5 py-5 flex-grow ">
         <div class="bg-white rounded-2xl shadow-lg p-10 md:p-16 text-center max-w-3xl   border border-gray-200 backdrop-blur-md">
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-5"></h2>
-            <p class="text-lg text-gray-600 leading-relaxed mb-8"></p>
+            <h2 class="text-xl md:text-xl leading-relaxed mb-7 "> Did you know that you can get your policy's insights in a minute? </h2>
+       
             <button
                 id="get-started-btn"
                 onclick="alert('Coming soon')"
@@ -654,7 +669,7 @@
     </a>
   </div>
 
-  <div class="text-center p-3 text-white" style="background-color: rgba(0,0,0,0.2); font-[Roboto] ">
+  <div class="text-center p-3 text-white font-[Roboto]" style="background-color: rgba(0,0,0,0.2);  ">
     © 2025 POLIAGENTX.All rights reserved.
   </div>
 </footer>
