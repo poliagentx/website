@@ -1,24 +1,27 @@
-FROM node:20-alpine AS builder
+# Tumia Node.js Alpine image
+FROM node:18-alpine
 
+# Set working directory
 WORKDIR /app
 
-COPY package.json package-lock.json ./
-RUN npm install
-
+# Nakili kila kitu
 COPY . .
 
-# ✅ Make local node_modules/.bin available in PATH
-ENV PATH="/app/node_modules/.bin:$PATH"
+# Set env ili devDependencies ziingizwe
+ENV NODE_ENV=development
 
-# ✅ Run Tailwind build
-RUN npm run build
+# Install dependencies zote
+RUN npm install
+
+# Install live-server globally
+RUN npm install -g live-server
+
+# Build Tailwind output.css
+RUN npx tailwindcss -i input.css -o output.css --minify
 
 
-FROM nginx:alpine
+# Fungua port
+EXPOSE 8080
 
-# Copy build output
-COPY --from=builder /app/dist /usr/share/nginx/html
-
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
+# Serve project including Assets
+CMD ["live-server", "--port=8080", "--watch=.", "--open=index.html"]
