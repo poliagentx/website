@@ -140,7 +140,6 @@
   }
   img, svg, video, canvas, audio, iframe, embed, object {
     display: block;
-    vertical-align: middle;
   }
   img, video {
     max-width: 100%;
@@ -1331,7 +1330,7 @@ section {
   }
 }
 @media (min-width: 1536px) {
-  .2xl\:max-w-screen-2xl {
+  .\32xl\:max-w-screen-2xl {
     max-width: 1536px;
   }
 }

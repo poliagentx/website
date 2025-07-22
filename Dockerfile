@@ -17,7 +17,7 @@ RUN npm install
 RUN npm install -g live-server
 
 # Build Tailwind output.css
-RUN npx tailwindcss -i input.css -o output.css --minify
+RUN npx tailwindcss -i ./input.css -o ./dist/output.css --minify
 
 
 # Fungua port
