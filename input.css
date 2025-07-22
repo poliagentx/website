@@ -1,6 +1,4 @@
-/* output.css */
-
-@import "tailwindcss";
+/* @import "tailwindcss"; */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,7 +12,7 @@
   --color-bg-tertiary: #e9eef3; /* For accordion headers */
   --color-bg-button: #e2e8f0; /* gray-200 */
   --color-bg-button-hover: #cbd5e1; /* gray-300 */
-  --color-bg-button-focus-ring: #838383;
+  --color-bg-button-focus-ring: #000000;
   --color-bg-footer: #616161; /* Original footer background */
   --color-bg-footer-overlay: rgba(0,0,0,0.2); /* Footer text background */
   --color-bg-blue-300: #93c5fd; /* Original blue-300 for accordion icons */
@@ -25,7 +23,7 @@
   /* Text Colors */
   --color-text-primary: #000000; /* Black for general text */
   --color-text-secondary: #4a5568; /* gray-700 for some paragraphs */
-  --color-text-button: #4a5568; /* gray-700 for theme toggle button */
+  --color-text-button: #f2f2f2; /* gray-700 for theme toggle button */
   --color-text-header: #000000; /* Header text */
   --color-text-footer: #f7f7f7; /* Footer text */
   --color-text-orange: #cb8700; /* Your specific orange color */
@@ -138,6 +136,7 @@ section {
 #about p {
   color: var(--color-text-primary); /* Use primary text color */
 }
+
 
 /* Cards (About, Team, Partners) */
 .grid > div { /* Target direct children of grid for cards */
@@ -359,7 +358,7 @@ section {
   }
 }
 @media (min-width: 1536px) {
-  .2xl\:max-w-screen-2xl {
+  .\32xl\:max-w-screen-2xl {
     max-width: 1536px;
   }
 }
