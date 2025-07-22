@@ -12,25 +12,9 @@
     <link rel="stylesheet" href="./output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="Icon" type="image/x-icon" href="Assets/Images/logo1.png" class="h-8 w-8">
-
+    <script src="Assets/Js/humming.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> -->
-  
-
-
-     <script>
-        (function() {
-            const savedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-                document.documentElement.classList.add('dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-            }
-        })();
-    </script>
-
 </head>
 
 <body class="prose font-[Poppins] bg-[#f2f2f2] min-h-screen flex flex-col dark">
@@ -707,6 +691,7 @@
 <script src="Assets/Js/get-started.js"></script>
 <script src="Assets/Js/theme.js"></script>
 <script src="Assets/Js/thememobile.js"></script>
+
 
 
 </body>
