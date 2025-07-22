@@ -1,25 +1,32 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
-    "./*.html",
-    "./Assets/Js/**/*.js",
+    './**/*.html',
+    './Assets/Js/**/*.js',
   ],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       colors: {
-        myindigo: {
-          100: "#d9dbde",
-          200: "#b3b7bc",
-          300: "#8e929b",
-          400: "#686e79",
-          500: "#424a58",
-          600: "#353b46",
-          700: "#282c35",
-          800: "#1a1e23",
-          900: "#0d0f12",
-        },
+        myorange: { /* ... */ },
+        mywhite: { /* ... */ },
+        myindigo: { /* ... */ },
       },
+      typography: (theme) => ({
+        dark: {
+          css: {
+            color: theme('colors.mywhite.100'),
+            a: { color: theme('colors.myorange.400') },
+            strong: { color: theme('colors.mywhite.100') },
+            h1: { color: theme('colors.mywhite.100') },
+            h2: { color: theme('colors.mywhite.100') },
+          },
+        },
+      }),
     },
   },
-  plugins: [],
+ 
 };
