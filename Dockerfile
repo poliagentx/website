@@ -1,21 +1,27 @@
-FROM node:20-alpine AS builder
+# Tumia Node.js Alpine image
+FROM node:18-alpine
 
+# Set working directory
 WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm install
+
+# Nakili kila kitu
 COPY . .
-RUN npm run build
 
-FROM nginx:alpine
+# Set env ili devDependencies ziingizwe
+ENV NODE_ENV=development
 
-# Remove default nginx config
-RUN rm /etc/nginx/conf.d/default.conf
+# Install dependencies zote
+RUN npm install
 
-# Copy custom nginx config
-COPY nginx.conf /etc/nginx/conf.d
+# Install live-server globally
+RUN npm install -g live-server
 
-# Copy build output
-COPY --from=builder /app/dist /usr/share/nginx/html
+# Build Tailwind output.css
+RUN npx tailwindcss -i ./input.css -o ./dist/output.css --minify
 
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+
+# Fungua port
+EXPOSE 8080
+
+# Serve project including Assets
+CMD ["live-server", "--port=8080", "--watch=.", "--open=index.html"]
