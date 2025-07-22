@@ -1,5 +1,5 @@
 
-  function toggleAccordion(button) {
+  function toggleAccordion1(button) {
     const content = button.nextElementSibling;
     const svg = button.querySelector('svg');
     const isOpen = !content.classList.contains('hidden');

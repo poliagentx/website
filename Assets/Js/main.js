@@ -43,3 +43,4 @@ document.addEventListener('DOMContentLoaded', function () {
   setupSlideshow('partners-slideshow', 'partners-prev', 'partners-next');
 });
 
+
