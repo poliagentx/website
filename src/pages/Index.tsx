@@ -16,7 +16,10 @@ import {
   Facebook,
   Twitter,
   ExternalLink,
-  Eye
+  Eye,
+  TrendingUp,
+  AlertCircle,
+  CheckCircle
 } from "lucide-react";
 
 import { Button } from '@/components/ui/button';
@@ -221,51 +224,71 @@ const Index = () => {
               <div className="glass-container rounded-2xl p-8 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/20 via-brand-secondary/10 to-brand-accent/20"></div>
                 <div className="relative z-10">
-                  <div className="grid grid-cols-2 gap-6">
-                    <motion.div 
-                      className="bg-white/10 rounded-lg p-4 border border-white/20"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <div className="w-12 h-12 bg-brand-primary/20 rounded-lg flex items-center justify-center mb-3">
-                        <Database className="w-6 h-6 text-brand-primary" />
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-semibold text-text-primary-contrast mb-2">Policy Insights Dashboard</h3>
+                    <p className="text-sm text-text-muted-contrast">Real-time analysis and predictions</p>
+                  </div>
+                  
+                  {/* Mock Dashboard */}
+                  <div className="space-y-6">
+                    {/* Key Metrics */}
+                    <div className="grid grid-cols-3 gap-4">
+                      {[
+                        { label: "GDP Growth", value: "+2.4%", change: "+0.3%", color: "text-brand-primary" },
+                        { label: "Employment", value: "74.2%", change: "+1.2%", color: "text-brand-secondary" },
+                        { label: "Inflation", value: "6.8%", change: "-0.5%", color: "text-brand-accent" }
+                      ].map((metric, index) => (
+                        <motion.div
+                          key={index}
+                          className="bg-white/10 rounded-lg p-3 border border-white/20"
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: index * 0.1 }}
+                        >
+                          <div className="text-xs text-text-muted-contrast mb-1">{metric.label}</div>
+                          <div className={`text-lg font-bold ${metric.color}`}>{metric.value}</div>
+                          <div className="text-xs text-text-muted-contrast">{metric.change}</div>
+                        </motion.div>
+                      ))}
+                    </div>
+                    
+                    {/* Mock Chart */}
+                    <div className="bg-white/5 rounded-lg p-4 border border-white/20">
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-sm text-text-primary-contrast">Policy Impact Trends</span>
+                        <TrendingUp className="w-4 h-4 text-brand-primary" />
                       </div>
-                      <h3 className="text-sm font-medium text-text-primary-contrast mb-1">Data Upload</h3>
-                      <p className="text-xs text-text-muted-contrast">Government indicators</p>
-                    </motion.div>
-                    <motion.div 
-                      className="bg-white/10 rounded-lg p-4 border border-white/20"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <div className="w-12 h-12 bg-brand-secondary/20 rounded-lg flex items-center justify-center mb-3">
-                        <Settings className="w-6 h-6 text-brand-secondary" />
+                      <div className="h-20 flex items-end justify-between gap-1">
+                        {[40, 65, 45, 80, 60, 90, 75, 85].map((height, index) => (
+                          <motion.div
+                            key={index}
+                            className="bg-gradient-to-t from-brand-primary to-brand-secondary rounded-t"
+                            style={{ height: `${height}%`, width: '12%' }}
+                            initial={{ height: 0 }}
+                            animate={{ height: `${height}%` }}
+                            transition={{ delay: index * 0.1, duration: 0.6 }}
+                          />
+                        ))}
                       </div>
-                      <h3 className="text-sm font-medium text-text-primary-contrast mb-1">Calibration</h3>
-                      <p className="text-xs text-text-muted-contrast">Model parameters</p>
-                    </motion.div>
-                    <motion.div 
-                      className="bg-white/10 rounded-lg p-4 border border-white/20"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <div className="w-12 h-12 bg-brand-accent/20 rounded-lg flex items-center justify-center mb-3">
-                        <Play className="w-6 h-6 text-brand-accent" />
+                    </div>
+                    
+                    {/* Quick Insights */}
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="bg-white/5 rounded-lg p-3 border border-white/20">
+                        <div className="flex items-center gap-2 mb-2">
+                          <AlertCircle className="w-4 h-4 text-brand-accent" />
+                          <span className="text-xs text-text-primary-contrast font-medium">Risk Alert</span>
+                        </div>
+                        <p className="text-xs text-text-muted-contrast">High unemployment in rural areas</p>
                       </div>
-                      <h3 className="text-sm font-medium text-text-primary-contrast mb-1">Simulation</h3>
-                      <p className="text-xs text-text-muted-contrast">Policy testing</p>
-                    </motion.div>
-                    <motion.div 
-                      className="bg-white/10 rounded-lg p-4 border border-white/20"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <div className="w-12 h-12 bg-brand-primary/20 rounded-lg flex items-center justify-center mb-3">
-                        <BarChart3 className="w-6 h-6 text-brand-primary" />
+                      <div className="bg-white/5 rounded-lg p-3 border border-white/20">
+                        <div className="flex items-center gap-2 mb-2">
+                          <CheckCircle className="w-4 h-4 text-brand-primary" />
+                          <span className="text-xs text-text-primary-contrast font-medium">Opportunity</span>
+                        </div>
+                        <p className="text-xs text-text-muted-contrast">Tech sector growth potential</p>
                       </div>
-                      <h3 className="text-sm font-medium text-text-primary-contrast mb-1">Analysis</h3>
-                      <p className="text-xs text-text-muted-contrast">Real-time insights</p>
-                    </motion.div>
+                    </div>
                   </div>
                 </div>
               </div>
