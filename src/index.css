@@ -1,0 +1,384 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* POLIAGENTX Brand Colors - 30-60-10 Rule */
+    /* 60% - Dominant (backgrounds, large areas) */
+    --dominant: 0 0% 98%; /* Light neutral background */
+    --dominant-secondary: 210 20% 95%; /* Slightly cooler neutral */
+    
+    /* 30% - Secondary (sections, cards, components) */
+    --secondary-brand: 41 100% 39%; /* Custom golden color #cb8700 */
+    --secondary-light: 41 100% 95%; /* Very light golden for sections */
+    --secondary-dark: 41 100% 25%; /* Darker golden for emphasis */
+    
+    /* 10% - Accent (buttons, highlights, CTAs) */
+    --accent-brand: 142 76% 36%; /* Green for actions/success */
+    --accent-secondary: 221 83% 53%; /* Blue for links/info */
+    
+    /* Legacy brand colors for compatibility */
+    --brand-primary: var(--secondary-brand);
+    --brand-secondary: var(--accent-brand);
+    --brand-accent: var(--accent-secondary);
+    --brand-dark: 222.2 84% 4.9%;
+    
+    /* Navigation colors - Light theme with high contrast */
+    --nav-bg: 0 0% 100% / 0.95;
+    --nav-border: 220 14% 90%;
+    --nav-text: 222.2 84% 4.9%; /* High contrast dark text for light nav */
+    --nav-text-muted: 215.4 16.3% 35%; /* Darker muted text for better contrast */
+    --nav-text-hover: 41 100% 35%; /* Brand color on hover, slightly darker for contrast */
+    
+    /* Feature section colors */
+    --feature-bg: 0 0% 100%;
+    --feature-border: 220 14% 96%;
+    --feature-shadow: 220 14% 93%;
+    --feature-icon-primary: var(--brand-secondary);
+    --feature-icon-secondary: var(--brand-accent);
+    --feature-icon-accent: var(--brand-primary);
+    
+    /* Hero section with better contrast */
+    --hero-bg: linear-gradient(135deg, hsl(var(--brand-primary) / 0.08), hsl(var(--brand-secondary) / 0.08));
+    --hero-text-primary: 222.2 84% 4.9%; /* High contrast dark text */
+    --hero-text-accent: 41 100% 35%; /* Darker brand color for better contrast */
+    
+    /* Section backgrounds */
+    --section-bg-light: 0 0% 98%;
+    --section-bg-accent: 41 100% 39% / 0.05;
+    
+    /* Card styles */
+    --card-bg: 0 0% 100%;
+    --card-border: 220 14% 93%;
+    --card-shadow: 0 10px 30px -10px hsl(220 14% 85% / 0.3);
+    --card-hover-shadow: 0 20px 40px -10px hsl(220 14% 75% / 0.4);
+    
+    /* Text contrast improvements - Light theme */
+    --text-primary: 222.2 84% 4.9%; /* High contrast dark text */
+    --text-secondary: 215.4 16.3% 35%; /* Medium contrast text - darker for better readability */
+    --text-muted: 215.4 16.3% 50%; /* Lower contrast text - still readable */
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Dark mode overrides - 30-60-10 rule with improved contrast */
+    /* 60% - Dominant dark backgrounds */
+    --dominant: 222.2 84% 4.9%;
+    --dominant-secondary: 240 5.9% 10%;
+    
+    /* 30% - Secondary (keep same brand colors but adjust for dark) */
+    --secondary-light: 41 100% 15%;
+    --secondary-dark: 41 100% 55%; /* Brighter for dark theme */
+    
+    /* Navigation colors - Dark theme with high contrast */
+    --nav-bg: 240 5.9% 10% / 0.95;
+    --nav-border: 240 3.7% 15.9%;
+    --nav-text: 210 40% 98%; /* High contrast light text for dark nav */
+    --nav-text-muted: 215 20.2% 75%; /* Brighter muted text for dark theme */
+    --nav-text-hover: 41 100% 60%; /* Brighter brand color on hover for dark theme */
+    
+    /* Component overrides with better contrast */
+    --feature-bg: 240 5.9% 10%;
+    --feature-border: 240 3.7% 15.9%;
+    --hero-bg: linear-gradient(135deg, hsl(41 100% 39% / 0.1), hsl(142 76% 36% / 0.1));
+    --hero-text-primary: 210 40% 98%; /* High contrast light text */
+    --hero-text-accent: 41 100% 65%; /* Brighter brand color for dark theme */
+    --section-bg-light: 240 5.9% 10%;
+    --section-bg-accent: 41 100% 39% / 0.1;
+    --card-bg: 240 5.9% 10%;
+    --card-border: 240 3.7% 15.9%;
+    
+    /* Text contrast improvements - Dark theme */
+    --text-primary: 210 40% 98%; /* High contrast light text */
+    --text-secondary: 215 20.2% 75%; /* Medium contrast text - brighter for dark theme */
+    --text-muted: 215 20.2% 65%; /* Lower contrast text - still readable in dark */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.025em;
+  }
+  
+  .font-heading {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  
+  .font-body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out;
+  }
+  
+  .animate-scale-in {
+    animation: scale-in 0.5s ease-out;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.6s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.6s ease-out;
+  }
+  
+  .hero-gradient {
+    background: var(--hero-bg);
+  }
+  
+  .section-light {
+    background: hsl(var(--section-bg-light));
+  }
+  
+  .section-accent {
+    background: hsl(var(--section-bg-accent));
+  }
+  
+  .card-elevated {
+    background: hsl(var(--card-bg));
+    border: 1px solid hsl(var(--card-border));
+    box-shadow: var(--card-shadow);
+    transition: var(--transition-smooth);
+  }
+  
+  .card-elevated:hover {
+    box-shadow: var(--card-hover-shadow);
+    transform: translateY(-4px);
+  }
+  
+  /* High contrast text utilities */
+  .text-nav {
+    color: hsl(var(--nav-text));
+  }
+  
+  .text-nav-muted {
+    color: hsl(var(--nav-text-muted));
+  }
+  
+  .text-nav-hover {
+    color: hsl(var(--nav-text-hover));
+  }
+  
+  .text-primary-contrast {
+    color: hsl(var(--text-primary));
+  }
+  
+  .text-secondary-contrast {
+    color: hsl(var(--text-secondary));
+  }
+  
+  .text-muted-contrast {
+    color: hsl(var(--text-muted));
+  }
+  
+  .text-brand-primary {
+    color: hsl(var(--brand-primary));
+  }
+  
+  .text-brand-secondary {
+    color: hsl(var(--brand-secondary));
+  }
+  
+  .text-brand-accent {
+    color: hsl(var(--brand-accent));
+  }
+  
+  .bg-brand-primary {
+    background-color: hsl(var(--brand-primary));
+  }
+  
+  .bg-brand-secondary {
+    background-color: hsl(var(--brand-secondary));
+  }
+  
+  .bg-brand-accent {
+    background-color: hsl(var(--brand-accent));
+  }
+  
+  .bg-nav {
+    background-color: hsl(var(--nav-bg));
+    border-color: hsl(var(--nav-border));
+  }
+
+  /* Glassmorphic Button Effects */
+  .glass-button {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+    transform: translateY(-2px);
+  }
+
+  .glass-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 60px 0 rgba(31, 38, 135, 0.1);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
