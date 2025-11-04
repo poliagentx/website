@@ -593,13 +593,13 @@ const Index = () => {
           github: "https://github.com/NGIYEG"
         },
        {
-          name: "Frenderick Maina",
+          name: "Frenderik Maina",
           role: "Mentor",
           org: "JHUB-AFRICA",
           imageUrl: fredImg,
           featured: true,
-          linkedin: "https://www.linkedin.com/in/george-ngiye-498803366",
-          github: "https://github.com/abm-jhub"
+          linkedin: "https://www.linkedin.com/in/frenderik-maina-38b810240",
+          github: "https://github.com/Frenderik"
         },
         {
           name: "Lincoln Muraguri",
