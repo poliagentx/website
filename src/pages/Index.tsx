@@ -49,6 +49,7 @@ import brianImg from "@/assets/team/brian.jpeg";
 import danieleImg from "@/assets/team/daniele.png";
 import evanImg from "@/assets/team/evan.jpg";
 import geoffreyImg from "@/assets/team/geofrey.png";
+import fredImg from "@/assets/team/fred.jpg";
 import hannahImg from "@/assets/team/hannah.jpg";
 import hiramImg from "@/assets/team/hiram.png";
 import lawrenceImg from "@/assets/team/lawrence.png";
@@ -591,6 +592,15 @@ const Index = () => {
           linkedin: "https://www.linkedin.com/in/george-ngiye-498803366",
           github: "https://github.com/NGIYEG"
         },
+       {
+          name: "Fred Maina",
+          role: "Mentor",
+          org: "Data Analyst & UI/UX Designer",
+          imageUrl: fredImg,
+          featured: true,
+          linkedin: "https://www.linkedin.com/in/george-ngiye-498803366",
+          github: "https://github.com/NGIYEG"
+        },
         {
           name: "Lincoln Muraguri",
           role: "Backend Developer",
@@ -612,20 +622,7 @@ const Index = () => {
           linkedin: "https://www.linkedin.com/in/placeholder",
           github: "https://github.com/nerdybrian"
         },
-        {
-          name: "Bridgit Kagendo",
-          role: "Frontend Developer",
-          initials: "BK",
-          linkedin: "https://www.linkedin.com/in/placeholder",
-          github: "https://github.com/BridgitKagendo"
-        },
-        {
-          name: "Hannah Kibunja",
-          role: "Communication Specialist",
-          imageUrl: hannahImg,
-          linkedin: "https://www.linkedin.com/in/hannah-kibunja-471261330",
-          github: "https://github.com/"
-        },
+      
         {
           name: "Dr Daniele Guariso",
           role: "The Alan Turing Institute",
