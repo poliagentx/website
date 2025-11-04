@@ -595,11 +595,11 @@ const Index = () => {
        {
           name: "Fred Maina",
           role: "Mentor",
-          org: "Data Analyst & UI/UX Designer",
+          org: "JHUB-AFRICA",
           imageUrl: fredImg,
           featured: true,
           linkedin: "https://www.linkedin.com/in/george-ngiye-498803366",
-          github: "https://github.com/NGIYEG"
+          github: "https://github.com/abm-jhub"
         },
         {
           name: "Lincoln Muraguri",
