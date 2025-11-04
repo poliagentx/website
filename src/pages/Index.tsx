@@ -593,7 +593,7 @@ const Index = () => {
           github: "https://github.com/NGIYEG"
         },
        {
-          name: "Fred Maina",
+          name: "Frenderick Maina",
           role: "Mentor",
           org: "JHUB-AFRICA",
           imageUrl: fredImg,
